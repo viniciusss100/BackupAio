@@ -1,0 +1,17 @@
+[
+  {
+    "expression": "language(streams, 'Portuguese', 'Portuguese (Brazil)')",
+    "score": 1000,
+    "enabled": true
+  },
+  {
+    "expression": "keyword(   streams,   'releaseGroup',   'starkfilmes',   'andremor',   'tbmovies',   'dual-rick',   'highvoltage',   'lactato',   'resu',   'wastaken',   'turing',   'dual-frncr',   'cr4ck3r',   'eck',   'sgf',   'fuzeer',   'multi-mwr',   'silveira-team',   'tr-pt',   'ita-por',   'brazilian',   'porb',   'port',   'ptbr',   'multi-audio',   'porbr' )",
+    "score": 500,
+    "enabled": true
+  },
+  {
+    "expression": "keyword(   streams,   'filename',   'portuguese',   'português',   'pt-br',   'ptbr',   'porbr',   'por-bra',   'brazilian',   'dublado',   'dub',   'dual',   'multi-audio',   'multi.audio',   'ita-por',   'tr-pt',   'porb',   'port' )",
+    "score": 300,
+    "enabled": true
+  }
+]
