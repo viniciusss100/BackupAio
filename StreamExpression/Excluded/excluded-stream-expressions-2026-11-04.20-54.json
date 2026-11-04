@@ -1,0 +1,14 @@
+[
+  {
+    "expression": "negate(   addon(service(uncached(streams), 'torbox'), 'Newznab'),   service(uncached(streams), 'torbox') )",
+    "enabled": true
+  },
+  {
+    "expression": "quality(streams, 'CAM', 'CAMRip', 'TC', 'HDTC')",
+    "enabled": true
+  },
+  {
+    "expression": "keyword(streams, 'filename', 'cam', 'hdcam', 'telesync', 'camrip', 'vf1', 'vf2', 'truefrench', 'vff', 'vfi', 'vfq', 'kpfr', 'sample')",
+    "enabled": true
+  }
+]
