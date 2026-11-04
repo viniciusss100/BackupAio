@@ -1,8 +1,9 @@
 [
   {
-    "expression": "uncached(streams)",
-    "enabled": false
-  },
+    "expression": "addon(uncached(service(streams, 'torbox')), 'TorBox')",
+    "enabled": true
+  }
+],
   {
     "expression": "quality(streams, 'CAM', 'CAMRip', 'TC', 'HDTC')",
     "enabled": true
