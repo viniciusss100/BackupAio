@@ -10,7 +10,7 @@
       ]
     },
     {
-      "name": "[Usenet]",
+      "name": "[📰]",
       "query": "/\\aio\\b/",
       "fields": [
         "name",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "name": "[EasyNews]",
+      "name": "[EN]",
       "query": "/\\en\\b/",
       "fields": [
         "name",
