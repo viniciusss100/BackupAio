@@ -622,46 +622,200 @@
     {
       "label": "RD",
       "match": "^Ready RD$",
-      "color": "#0E0E0E",
-      "background": "#8C8C8C",
-      "border": "#8C8C8C",
-      "group": "svc",
       "fields": [
         "rseMatched"
-      ]
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
     },
     {
       "label": "TB",
       "match": "^Ready TB$",
-      "color": "#00ff00",
-      "background": "#8C8C8C",
-      "border": "#8C8C8C",
-      "group": "svc",
       "fields": [
         "rseMatched"
-      ]
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
     },
     {
       "label": "AD",
       "match": "^Ready AD$",
-      "color": "#0E0E0E",
-      "background": "#8C8C8C",
-      "border": "#8C8C8C",
-      "group": "svc",
       "fields": [
         "rseMatched"
-      ]
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
     },
     {
       "label": "EN",
       "match": "^Ready EN$",
-      "color": "#ff0000",
-      "background": "#8C8C8C",
-      "border": "#8C8C8C",
-      "group": "svc",
       "fields": [
         "rseMatched"
-      ]
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "PM",
+      "match": "^Ready PM$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "DL",
+      "match": "^Ready DL$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "SN",
+      "match": "^SNNTP$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "ND",
+      "match": "^NZD$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "AM",
+      "match": "^ALT$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "OC",
+      "match": "^Ready OC$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "P.IO",
+      "match": "^Ready PUT$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "ED",
+      "match": "^Ready ED$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "DR",
+      "match": "^Ready DBR$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "PKP",
+      "match": "^Ready PK$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "SEEDR",
+      "match": "^Ready SEEDR$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "ST",
+      "match": "^STNEWZ$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "AIO",
+      "match": "^AIO$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
+    },
+    {
+      "label": "TR",
+      "match": "^Ready TORRIN$",
+      "fields": [
+        "rseMatched"
+      ],
+      "group": "aiostreams-selos-services",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C"
     }
   ]
 }
