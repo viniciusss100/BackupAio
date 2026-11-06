@@ -1,0 +1,452 @@
+{
+  "badges": [
+    {
+      "label": "DUBLADO",
+      "match": "^(Portuguese|Portuguese .*)$",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/dublado.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DIRETO",
+      "match": "(library|Library)$",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/direto.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000",
+      "fields": [
+        "service",
+        "description",
+        "addon"
+      ]
+    },
+    {
+      "label": "4K",
+      "match": "(?i)(2160p|\\b4k\\b|\\buhd\\b)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/4k_ultra_hd.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "1080p",
+      "match": "(?i)1080p",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/1080p_full_hd.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "720p",
+      "match": "(?i)720p",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/720p_hd.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "SD",
+      "match": "(?<![\\w-])SD •",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/480p_sd.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DV",
+      "match": "(?i)\\b(dv|dovi|dolby[ ._-]?vision)\\b",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dolby_vision.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "HDR10+",
+      "match": "(?i)hdr10(\\+|plus)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/hdr10_plus.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "HDR10",
+      "match": "(?i)\\bhdr10\\b(?!\\+)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/hdr10.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "HDR",
+      "match": "(?i)\\bhdr\\b",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/hdr.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "HLG",
+      "match": "(?i)\\bhlg\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/hlg.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "10bit",
+      "match": "(?i)\\b10bit\\b",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/10Bit_transparent_4x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "REMUX",
+      "match": "(?i)remux",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/remux.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "WEB-DL",
+      "match": "(?i)web[ ._-]?dl",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/WEBDL_transparent_4x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "WEBRip",
+      "match": "(?i)webrip",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/WEBRip_transparent_4x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "WEB",
+      "match": "🎥 WEB(?![-\\w])",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/web.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "BluRay",
+      "match": "(?i)(blu[ ._-]?ray|bdrip|brrip)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/blu_ray_disc.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "HDTV",
+      "match": "(?i)\\bhdtv\\b",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/HDTV_transparent_4x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DVD",
+      "match": "🎥 DVD",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/DVD_RIP_transparent_4x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "CAM",
+      "match": "🎥 CAM",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/cam.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "HEVC",
+      "match": "(?i)(hevc|\\b[xh][ .]?265\\b)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/HEVC_transparent_4x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "AV1",
+      "match": "(?i)\\bav1\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/av1.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "H.264",
+      "match": "(?i)\\b(avc|[xh][ .]?264)\\b",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/AVC_transparent_4x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "ATMOS",
+      "match": "(?i)atmos",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dolby_atmos.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "TrueHD",
+      "match": "(?i)truehd",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/truehd.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DTS:X",
+      "match": "(?i)dts[-.: ]?x\\b",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dts_x.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DTS-HD MA",
+      "match": "(?i)dts[ ._-]?hd[ ._-]?ma",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dts_hd_master_audio.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DTS-HD",
+      "match": "(?i)dts[ ._-]?hd(?![ ._-]?ma)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dts_hd.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DTS",
+      "match": "(?i)\\bdts\\b(?![ ._:-]?(hd|x\\b))",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dts.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DD+",
+      "match": "(?i)(\\bddp|\\bdd\\+|\\be-?ac-?3)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dolby_digital_plus.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DD",
+      "match": "(?i)\\b(dd|ac-?3)\\b(?!\\+)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/dolby_digital.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "FLAC",
+      "match": "(?i)\\bflac\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/flac.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "AAC",
+      "match": "(?i)\\baac\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/aac.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "OPUS",
+      "match": "(?i)\\bopus\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/opus.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "7.1",
+      "match": "(?i)(\\b7\\.1\\b|\\b8ch\\b)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/7_1_audio.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "5.1",
+      "match": "(?i)(\\b5\\.1\\b|\\b6ch\\b)",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/5_1_audio.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "2.0",
+      "match": "🔊 2\\.0",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/20.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "LEGENDADO",
+      "match": "^(Portuguese|Portuguese .*)$",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/legendado.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "Netflix",
+      "match": "(?i)(\\bnf\\b|netflix)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/netflix.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Prime Video",
+      "match": "(?i)(\\bamzn\\b|🎭 amazon|prime video)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/prime.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Disney+",
+      "match": "(?i)(\\bdsnp\\b|disney\\+)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/disney.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Max",
+      "match": "(?i)(\\bhmax\\b|🎭 max\\b)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/max.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Apple TV+",
+      "match": "(?i)(\\batvp\\b|apple tv\\+)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/appletv.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Globoplay",
+      "match": "(?i)(\\bglbo\\b|globoplay)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/globoplay.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Crunchyroll",
+      "match": "(?i)(\\bcr\\b|crunchyroll)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/crunchyroll.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Paramount+",
+      "match": "(?i)(\\bpmtp\\b|paramount\\+)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/paramount.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Hulu",
+      "match": "(?i)\\bhulu\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/hulu.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "Peacock",
+      "match": "(?i)(\\bpcok\\b|peacock)",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/peacock.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "IMAX",
+      "match": "(?i)\\bimax\\b",
+      "image": "https://raw.githubusercontent.com/leonevz/Elite-Badges/main/Badges/imax.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "EXTENDED",
+      "match": "(?i)\\bextended\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/extended.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "DIRECTOR'S CUT",
+      "match": "(?i)director'?s cut",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/dircut.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "REMASTERED",
+      "match": "(?i)\\bremastered\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/remastered.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "UNCUT",
+      "match": "(?i)\\buncut\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/uncut.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "CRITERION",
+      "match": "(?i)\\bcriterion\\b",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/criterion.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    },
+    {
+      "label": "OPEN MATTE",
+      "match": "(?i)open matte",
+      "image": "https://raw.githubusercontent.com/viniciusss100/BackupAio/refs/heads/main/Selos/imagens/openmatte.png",
+      "color": "#00000000",
+      "background": "#00000000",
+      "border": "#00000000"
+    }
+  ]
+}
