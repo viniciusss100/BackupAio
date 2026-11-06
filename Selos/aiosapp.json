@@ -1,0 +1,667 @@
+{
+  "badges": [
+    {
+      "label": "Dublado",
+      "match": "^(Portuguese|Portuguese .*)$",
+      "color": "#000000",
+      "background": "#00ff00",
+      "border": "#ffff00",
+      "group": "pt",
+      "fields": [
+        "languages",
+        "filename"
+      ]
+    },
+    {
+      "label": "T1",
+      "match": "\\bT1$",
+      "color": "#0E0E0E",
+      "background": "#C6A56B",
+      "border": "#C6A56B",
+      "group": "tier",
+      "fields": [
+        "rseMatched"
+      ]
+    },
+    {
+      "label": "T2",
+      "match": "\\bT2$",
+      "color": "#EDE8DF",
+      "border": "#EDE8DF",
+      "group": "tier",
+      "fields": [
+        "rseMatched"
+      ]
+    },
+    {
+      "label": "T3",
+      "match": "\\bT3$",
+      "color": "#8C8C8C",
+      "border": "#4A4A4A",
+      "group": "tier",
+      "fields": [
+        "rseMatched"
+      ]
+    },
+    {
+      "label": "LQ",
+      "match": "^(LQ|LQ Title|Anime LQ|Asian LQ|Upscaled|FR FastSUB|FR LQ .*)$",
+      "color": "#8C8C8C",
+      "border": "#8C8C8C",
+      "fields": [
+        "rseMatched"
+      ]
+    },
+    {
+      "label": "4K",
+      "match": "^(2160p|4k)$",
+      "color": "#0E0E0E",
+      "background": "#EDE8DF",
+      "border": "#EDE8DF",
+      "group": "res",
+      "fields": [
+        "resolution"
+      ]
+    },
+    {
+      "label": "1080",
+      "match": "^1080p$",
+      "color": "#EDE8DF",
+      "border": "#EDE8DF",
+      "group": "res",
+      "fields": [
+        "resolution"
+      ]
+    },
+    {
+      "label": "720",
+      "match": "^720p$",
+      "color": "#8C8C8C",
+      "border": "#4A4A4A",
+      "group": "res",
+      "fields": [
+        "resolution"
+      ]
+    },
+    {
+      "label": "REMUX",
+      "match": "remux",
+      "color": "#C6A56B",
+      "border": "#C6A56B",
+      "group": "src",
+      "fields": [
+        "quality"
+      ]
+    },
+    {
+      "label": "BLURAY",
+      "match": "^blu-?ray$",
+      "color": "#EDE8DF",
+      "border": "#4A4A4A",
+      "group": "src",
+      "fields": [
+        "quality"
+      ]
+    },
+    {
+      "label": "WEB-DL",
+      "match": "^web-?dl$",
+      "color": "#8C8C8C",
+      "border": "#4A4A4A",
+      "group": "src",
+      "fields": [
+        "quality"
+      ]
+    },
+    {
+      "label": "WEBRIP",
+      "match": "^web-?rip$",
+      "color": "#8C8C8C",
+      "border": "#4A4A4A",
+      "group": "src",
+      "fields": [
+        "quality"
+      ]
+    },
+    {
+      "label": "HDR+DV",
+      "match": "HDR\\+DV|(?=.*\\bHDR)(?=.*\\bDV\\b)",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/hdr/hdrdv.png?v=6",
+      "border": "#C6A56B",
+      "group": "hdr",
+      "fields": [
+        "visualTags"
+      ]
+    },
+    {
+      "label": "HDR10+",
+      "match": "HDR10\\+",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/hdr/hdr10plus.png?v=6",
+      "border": "#C6A56B",
+      "group": "hdr",
+      "fields": [
+        "visualTags"
+      ]
+    },
+    {
+      "label": "HDR",
+      "match": "\\bHDR(10)?\\b",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/hdr/hdr10.png?v=6",
+      "border": "#C6A56B",
+      "group": "hdr",
+      "fields": [
+        "visualTags"
+      ]
+    },
+    {
+      "label": "DV",
+      "match": "\\bDV\\b",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/hdr/dv.png?v=6",
+      "border": "#C6A56B",
+      "group": "hdr",
+      "fields": [
+        "visualTags"
+      ]
+    },
+    {
+      "label": "HLG",
+      "match": "^HLG$",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/hdr/hlg.png?v=6",
+      "border": "#8C8C8C",
+      "group": "hdr",
+      "fields": [
+        "visualTags"
+      ]
+    },
+    {
+      "label": "SDR",
+      "match": "^(?!.*(HDR|\\bDV\\b|\\bDoVi\\b|HLG|Dolby[ ._-]?Vision)).+$",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/hdr/sdr.png?v=6",
+      "border": "#8C8C8C",
+      "group": "hdr",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "IMAX",
+      "match": "\\bimax\\b",
+      "color": "#EDE8DF",
+      "border": "#4A4A4A",
+      "fields": [
+        "visualTags",
+        "editions",
+        "filename"
+      ]
+    },
+    {
+      "label": "ATMOS",
+      "match": "atmos",
+      "color": "#C6A56B",
+      "border": "#C6A56B",
+      "group": "audio",
+      "fields": [
+        "audioTags"
+      ]
+    },
+    {
+      "label": "DTS:X",
+      "match": "dts[:-]?x",
+      "color": "#C6A56B",
+      "border": "#4A4A4A",
+      "group": "audio",
+      "fields": [
+        "audioTags"
+      ]
+    },
+    {
+      "label": "TRUEHD",
+      "match": "truehd",
+      "color": "#EDE8DF",
+      "border": "#4A4A4A",
+      "group": "audio",
+      "fields": [
+        "audioTags"
+      ]
+    },
+    {
+      "label": "DTS-HD MA",
+      "match": "dts-hd ?ma",
+      "color": "#EDE8DF",
+      "border": "#4A4A4A",
+      "group": "audio",
+      "fields": [
+        "audioTags"
+      ]
+    },
+    {
+      "label": "DD+",
+      "match": "^dd\\+$",
+      "color": "#8C8C8C",
+      "border": "#4A4A4A",
+      "group": "audio",
+      "fields": [
+        "audioTags"
+      ]
+    },
+    {
+      "label": "7.1",
+      "match": "^7\\.1$",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ch",
+      "fields": [
+        "audioChannels"
+      ]
+    },
+    {
+      "label": "5.1",
+      "match": "^5\\.1$",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ch",
+      "fields": [
+        "audioChannels"
+      ]
+    },
+    {
+      "label": "HEVC",
+      "match": "^(HEVC|H\\.?265|x265)$",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/codec/h265.png?v=6",
+      "border": "#C6A56B",
+      "group": "enc",
+      "fields": [
+        "encode"
+      ]
+    },
+    {
+      "label": "AV1",
+      "match": "^AV1$",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/codec/av1.png?v=6",
+      "border": "#C6A56B",
+      "group": "enc",
+      "fields": [
+        "encode"
+      ]
+    },
+    {
+      "label": "H.264",
+      "match": "^(AVC|H\\.?264|x264)$",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/codec/h264.png?v=6",
+      "border": "#8C8C8C",
+      "group": "enc",
+      "fields": [
+        "encode"
+      ]
+    },
+    {
+      "label": "VP9",
+      "match": "^VP9$",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/codec/vp9.png?v=6",
+      "border": "#8C8C8C",
+      "group": "enc",
+      "fields": [
+        "encode"
+      ]
+    },
+    {
+      "label": "10BIT",
+      "match": "\\b10[ ._-]?bit\\b",
+      "image": "https://raw.githubusercontent.com/paulthery/aiostreams-badges/main/codec/10bit.png?v=6",
+      "border": "#C6A56B",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "FINAL CUT",
+      "match": "^(?!(The[ ._-])?Final[ ._-]Cut[ ._-](19|20)\\d\\d).*\\bfinal[ ._-]?cut\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "DIR CUT",
+      "match": "^Director's Cut$|\\bdirector'?s?[ ._-]?cut\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions",
+        "filename"
+      ]
+    },
+    {
+      "label": "REDUX",
+      "match": "\\bredux\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "ROGUE CUT",
+      "match": "\\brogue[ ._-]?cut\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "ULTIMATE",
+      "match": "^Ultimate Edition$|\\bultimate[ ._-]?(cut|edition)\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions",
+        "filename"
+      ]
+    },
+    {
+      "label": "EXTENDED",
+      "match": "^Extended Edition$|version[ ._-]?longue",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions",
+        "filename"
+      ]
+    },
+    {
+      "label": "ROADSHOW",
+      "match": "\\broadshow\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "UNRATED",
+      "match": "\\bunrated\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "UNCUT",
+      "match": "^Uncut$|version[ ._-]?integrale",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions",
+        "filename"
+      ]
+    },
+    {
+      "label": "UNCENSORED",
+      "match": "\\buncensored\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "DEFINITIVE",
+      "match": "\\bdefinitive[ ._-]?(cut|edition)\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "SPECIAL ED",
+      "match": "\\bspecial[ ._-]?edition\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "INTL CUT",
+      "match": "\\binternational[ ._-]?(cut|version)\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "ALT CUT",
+      "match": "\\balternat(e|ive)[ ._-]?(cut|version)\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "ASSEMBLY",
+      "match": "\\bassembly[ ._-]?cut\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "PRODUCER CUT",
+      "match": "\\bproducers?'?[ ._-]?cut\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "WORKPRINT",
+      "match": "\\bworkprint\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "TV CUT",
+      "match": "\\b(tv|television)[ ._-]?(cut|version)\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "B&W",
+      "match": "black[ ._-]?(and|&)[ ._-]?(chrome|white)|\\bnoir[ ._-]?(edition|version)\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "DESPECIALIZED",
+      "match": "\\bdespeciali[sz]ed\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "ANNIVERSARY",
+      "match": "^Anniversary Edition$",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions"
+      ]
+    },
+    {
+      "label": "COLLECTOR",
+      "match": "^Collector's Edition$",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions"
+      ]
+    },
+    {
+      "label": "DIAMOND",
+      "match": "^Diamond Edition$",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions"
+      ]
+    },
+    {
+      "label": "PLATINUM",
+      "match": "\\bplatinum[ ._-]?edition\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "THEATRICAL",
+      "match": "^Theatrical$",
+      "color": "#5A5A5A",
+      "border": "#2E2E2E",
+      "group": "ed",
+      "fields": [
+        "editions"
+      ]
+    },
+    {
+      "label": "REMASTERED",
+      "match": "^Remastered$|\\brestor(ed|ation)\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "group": "rem",
+      "fields": [
+        "editions",
+        "filename"
+      ]
+    },
+    {
+      "label": "CRITERION",
+      "match": "^Criterion Collection$|\\bcriterion\\b",
+      "color": "#C6A56B",
+      "border": "#4A4A4A",
+      "fields": [
+        "editions",
+        "filename",
+        "folderName"
+      ]
+    },
+    {
+      "label": "OPEN MATTE",
+      "match": "open[ ._-]?matte",
+      "color": "#EDE8DF",
+      "border": "#2E2E2E",
+      "fields": [
+        "filename",
+        "folderName"
+      ]
+    },
+    {
+      "label": "PROPER",
+      "match": "\\b(repack|proper|rerip)\\d?\\b",
+      "color": "#8C8C8C",
+      "border": "#2E2E2E",
+      "fields": [
+        "filename"
+      ]
+    },
+    {
+      "label": "PACK",
+      "match": "\\bS\\d{1,2}\\b(?![ ._-]?E\\d)|\\bcomplete\\b|\\bintegrale?\\b",
+      "color": "#000000",
+      "background": "#ffffff",
+      "border": "#2E2E2E",
+      "fields": [
+        "filename",
+        "folderName"
+      ]
+    },
+    {
+      "label": "RD",
+      "match": "^Ready RD$",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C",
+      "group": "svc",
+      "fields": [
+        "rseMatched"
+      ]
+    },
+    {
+      "label": "TB",
+      "match": "^Ready TB$",
+      "color": "#00ff00",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C",
+      "group": "svc",
+      "fields": [
+        "rseMatched"
+      ]
+    },
+    {
+      "label": "AD",
+      "match": "^Ready AD$",
+      "color": "#0E0E0E",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C",
+      "group": "svc",
+      "fields": [
+        "rseMatched"
+      ]
+    },
+    {
+      "label": "EN",
+      "match": "^Ready EN$",
+      "color": "#ff0000",
+      "background": "#8C8C8C",
+      "border": "#8C8C8C",
+      "group": "svc",
+      "fields": [
+        "rseMatched"
+      ]
+    }
+  ]
+}
