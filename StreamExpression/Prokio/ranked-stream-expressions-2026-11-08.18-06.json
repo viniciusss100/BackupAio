@@ -1,0 +1,307 @@
+[
+  {
+    "expression": "/* V100 UHD Remux */ quality(resolution(streams, '2160p'), 'BluRay REMUX')",
+    "score": 100000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V90 UHD BluRay encode */ quality(resolution(streams, '2160p'), 'BluRay')",
+    "score": 90000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V85 UHD WEB-DL */ quality(resolution(streams, '2160p'), 'WEB-DL')",
+    "score": 85000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V80 FHD Remux */ quality(resolution(streams, '1080p'), 'BluRay REMUX')",
+    "score": 80000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V75 UHD WEBRip */ quality(resolution(streams, '2160p'), 'WEBRip')",
+    "score": 75000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V70 FHD BluRay encode */ quality(resolution(streams, '1080p'), 'BluRay')",
+    "score": 70000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V65 FHD WEB-DL */ quality(resolution(streams, '1080p'), 'WEB-DL')",
+    "score": 65000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V60 FHD WEBRip */ quality(resolution(streams, '1080p'), 'WEBRip')",
+    "score": 60000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V50 HD BluRay ou Remux */ quality(resolution(streams, '720p'), 'BluRay', 'BluRay REMUX')",
+    "score": 50000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V45 HD WEB-DL */ quality(resolution(streams, '720p'), 'WEB-DL')",
+    "score": 45000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V40 HD WEBRip */ quality(resolution(streams, '720p'), 'WEBRip')",
+    "score": 40000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V70 UHD fonte nao classificada */ negate(rseMatched(streams), resolution(streams, '2160p'))",
+    "score": 70000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V60 QHD fonte nao classificada */ negate(rseMatched(streams), resolution(streams, '1440p'))",
+    "score": 60000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V50 FHD fonte nao classificada */ negate(rseMatched(streams), resolution(streams, '1080p'))",
+    "score": 50000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V30 HD fonte nao classificada */ negate(rseMatched(streams), resolution(streams, '720p'))",
+    "score": 30000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V20 Fonte SD identificada */ negate(rseMatched(streams), quality(streams, 'DVD REMUX', 'DVDRip', 'BluRay', 'WEB-DL', 'WEBRip', 'HDTV', 'HDRip', 'HC HD-Rip'))",
+    "score": 20000,
+    "enabled": true
+  },
+  {
+    "expression": "/* V10 Fonte desconhecida */ negate(rseMatched(streams), streams)",
+    "score": 10000,
+    "enabled": true
+  },
+  {
+    "expression": "/* T1 */ queryType=='movie' ? merge(quality(regexMatched(streams, 'TRaSH Radarr Remux T1'), 'BluRay REMUX'), quality(resolution(regexMatched(streams, 'TRaSH Radarr BluRay T1'), '2160p'), 'BluRay'), quality(regexMatched(streams, 'TRaSH Radarr WEB T1'), 'WEB-DL', 'WEBRip')) : queryType=='series' ? merge(quality(regexMatched(streams, 'TRaSH Sonarr Remux T1'), 'BluRay REMUX'), quality(negate(resolution(streams, '2160p'), regexMatched(streams, 'TRaSH Sonarr BluRay T1')), 'BluRay'), quality(regexMatched(streams, 'TRaSH Sonarr WEB T1'), 'WEB-DL', 'WEBRip')) : []",
+    "score": 3000,
+    "enabled": true
+  },
+  {
+    "expression": "/* T2 */ queryType=='movie' ? merge(quality(regexMatched(streams, 'TRaSH Radarr Remux T2'), 'BluRay REMUX'), quality(resolution(regexMatched(streams, 'TRaSH Radarr BluRay T2'), '2160p'), 'BluRay'), quality(regexMatched(streams, 'TRaSH Radarr WEB T2'), 'WEB-DL', 'WEBRip')) : queryType=='series' ? merge(quality(regexMatched(streams, 'TRaSH Sonarr Remux T2'), 'BluRay REMUX'), quality(negate(resolution(streams, '2160p'), regexMatched(streams, 'TRaSH Sonarr BluRay T2')), 'BluRay'), quality(regexMatched(streams, 'TRaSH Sonarr WEB T2'), 'WEB-DL', 'WEBRip')) : []",
+    "score": 2000,
+    "enabled": true
+  },
+  {
+    "expression": "/* T3 */ queryType=='movie' ? merge(quality(regexMatched(streams, 'TRaSH Radarr Remux T3'), 'BluRay REMUX'), quality(resolution(regexMatched(streams, 'TRaSH Radarr BluRay T3'), '2160p'), 'BluRay'), quality(regexMatched(streams, 'TRaSH Radarr WEB T3'), 'WEB-DL', 'WEBRip')) : queryType=='series' ? quality(regexMatched(streams, 'TRaSH Sonarr WEB T3'), 'WEB-DL', 'WEBRip') : []",
+    "score": 1000,
+    "enabled": true
+  },
+  {
+    "expression": "/* Transformacao upscale ou AI declarada */ visualTag(streams, 'Upscaled', 'AI')",
+    "score": -35000,
+    "enabled": true
+  },
+  {
+    "expression": "/* Imagem DV declarada */ visualTag(streams, 'DV', 'HDR+DV')",
+    "score": 1000,
+    "enabled": true
+  },
+  {
+    "expression": "/* Imagem HDR10+ - apenas bonus HDR10 */ negate(visualTag(streams, 'DV', 'HDR+DV'), visualTag(streams, 'HDR10+'))",
+    "score": 800,
+    "enabled": true
+  },
+  {
+    "expression": "/* Imagem HDR10 declarada */ negate(visualTag(streams, 'DV', 'HDR+DV', 'HDR10+'), visualTag(streams, 'HDR10'))",
+    "score": 800,
+    "enabled": true
+  },
+  {
+    "expression": "/* Imagem HDR ou HLG declarada */ negate(visualTag(streams, 'DV', 'HDR+DV', 'HDR10+', 'HDR10'), visualTag(streams, 'HDR', 'HLG'))",
+    "score": 600,
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio lossless anunciado no arquivo */ audioTag(streams, 'TrueHD', 'DTS-HD MA', 'DTS:X', 'FLAC', 'PCM')",
+    "score": 800,
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio com perdas multicanal anunciado */ negate(audioTag(streams, 'TrueHD', 'DTS-HD MA', 'DTS:X', 'FLAC', 'PCM'), audioTag(streams, 'DD+', 'DTS-HD', 'DTS', 'DTS-ES'))",
+    "score": 400,
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio com perdas anunciado */ negate(audioTag(streams, 'TrueHD', 'DTS-HD MA', 'DTS:X', 'FLAC', 'PCM', 'DD+', 'DTS-HD', 'DTS', 'DTS-ES'), audioTag(streams, 'AAC', 'OPUS', 'DD'))",
+    "score": 200,
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio Atmos - desempate */ audioTag(streams, 'Atmos')",
+    "score": 150,
+    "enabled": true
+  },
+  {
+    "expression": "/* SeaDex Best exato - somente anime */ isAnime ? seadex(streams, 'best', 'hash') : []",
+    "score": 300,
+    "enabled": true
+  },
+  {
+    "expression": "/* TRASH grupo premium - desempate */ regexMatched(streams, 'TRASH premium grupos 1', 'TRASH premium grupos 2')",
+    "score": 100,
+    "enabled": true
+  },
+  {
+    "expression": "/* LQ */ merge(merge(regexMatched(streams, 'TRaSH LQ origem antes de DUAL/MULTI', 'Curupira grupos com alerta', 'TRASH grupos com alerta', 'TRASH LQ Release Title (Radarr)', 'TRASH LQ Release Title (Sonarr)'), isAnime ? regexMatched(streams, 'TRASH Anime LQ') : [] ))",
+    "score": -50000,
+    "enabled": true
+  },
+  {
+    "expression": "/* Sterzeck PT-BR Group */ regexMatched(streams, 'Sterzeck PT-BR Group')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Bad Dual */ regexMatched(streams, 'TRASH Bad Dual')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Micro-encode */ regexMatched(streams, 'TRASH micro-encodes com alerta')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Upscaled */ visualTag(streams, 'Upscaled')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready TB */ service(cached(streams), 'torbox')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* AIO */ service(streams, 'aiostreams')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready EN */ service(cached(streams), 'easynews')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready RD */ service(cached(streams), 'realdebrid')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready AD */ service(cached(streams), 'alldebrid')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready PM */ service(cached(streams), 'premiumize')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready DL */ service(cached(streams), 'debridlink')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* SNNTP */ service(streams, 'stremio_nntp')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* NZD */ service(streams, 'nzbdav')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* ALT */ service(streams, 'altmount')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready OC */ service(cached(streams), 'offcloud')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready PUT */ service(cached(streams), 'putio')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready ED */ service(cached(streams), 'easydebrid')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready DBR */ service(cached(streams), 'debrider')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready PK */ service(cached(streams), 'pikpak')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready SEEDR */ service(cached(streams), 'seedr')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* STNEWZ */ service(streams, 'stremthru_newz')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Ready TORRIN */ service(cached(streams), 'torrin')",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio PT verificado na faixa */ merge(audioTrack(streams, 'lang=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|pt|pt-BR|pt-PT|por', '!commentary', '!visualImpaired', '!title~commentary|comentário|comentario|audio description|audio-description|audio descr|audiodescri|descriptive audio|described video'), audioTrack(streams, '!lang', 'title=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|Brazilian Portuguese|European Portuguese|Português|Português (Brasil)|Português (Portugal)|Português Brasileiro|pt|pt-BR|pt-PT|por', '!commentary', '!visualImpaired', '!title~commentary|comentário|comentario|audio description|audio-description|audio descr|audiodescri|descriptive audio|described video'))",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio PT confirmado pela fonte */ negate(merge(merge(audioTrack(streams, 'lang=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|pt|pt-BR|pt-PT|por'), audioTrack(streams, '!lang', 'title=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|Brazilian Portuguese|European Portuguese|Português|Português (Brasil)|Português (Portugal)|Português Brasileiro|pt|pt-BR|pt-PT|por')), negate(audioTrack(streams, '!lang'), audioTrack(streams, 'lang'))), merge(indexer(addon(streams, 'Curupira'), 'Curupira (audio PT declarado)'), indexer(addon(streams, 'CapybaraBR'), 'CapybaraBR (audio PT declarado)')))",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Legenda PT confirmada */ merge(merge(subtitleTrack(streams, 'lang=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|pt|pt-BR|pt-PT|por', '!forced', '!title~forced|forçad|forcad'), subtitleTrack(streams, '!lang', 'title=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|Brazilian Portuguese|European Portuguese|Português|Português (Brasil)|Português (Portugal)|Português Brasileiro|pt|pt-BR|pt-PT|por', '!forced', '!title~forced|forçad|forcad')), negate(merge(subtitleTrack(streams, 'lang=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|pt|pt-BR|pt-PT|por'), subtitleTrack(streams, '!lang', 'title=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|Brazilian Portuguese|European Portuguese|Português|Português (Brasil)|Português (Portugal)|Português Brasileiro|pt|pt-BR|pt-PT|por')), subtitle(streams, 'Portuguese', 'Portuguese (Brazil)')))",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Legenda PT forcada */ negate(rseMatched(streams, 'Legenda PT confirmada'), merge(subtitleTrack(streams, 'lang=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|pt|pt-BR|pt-PT|por'), subtitleTrack(streams, '!lang', 'title=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|Brazilian Portuguese|European Portuguese|Português|Português (Brasil)|Português (Portugal)|Português Brasileiro|pt|pt-BR|pt-PT|por')))",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Possivel audio PT */ negate(merge(rseMatched(streams, 'Audio PT verificado na faixa', 'Audio PT confirmado pela fonte'), merge(audioTrack(streams, 'lang=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|pt|pt-BR|pt-PT|por'), audioTrack(streams, '!lang', 'title=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|Brazilian Portuguese|European Portuguese|Português|Português (Brasil)|Português (Portugal)|Português Brasileiro|pt|pt-BR|pt-PT|por')), negate(audioTrack(streams, '!lang'), audioTrack(streams, 'lang')), merge(indexer(addon(streams, 'Curupira'), 'Curupira (audio PT declarado)', 'Curupira (audio declarado)'), indexer(addon(streams, 'CapybaraBR'), 'CapybaraBR (audio PT declarado)', 'CapybaraBR (audio declarado)'))), merge(regexMatched(streams, 'PT Audio declarado'), negate(merge(regexMatched(streams, 'PT Legenda declarada'), rseMatched(streams, 'Legenda PT confirmada', 'Legenda PT forcada'), regexMatched(streams, 'TRASH contexto legenda')), regexMatched(merge(regexMatched(streams, 'PT Marcador sem trilha'), regexMatched(streams, 'TRASH PT grupos 1', 'TRASH PT grupos 2', 'TRASH PT grupos 3', 'TRASH PT grupos 4', 'TRASH PT grupos 5', 'TRASH PT grupos 6', 'TRASH PT grupos 7', 'TRASH PT grupos 8', 'Sterzeck PT-BR Group')), 'TRASH contexto audio'))))",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Possivel legenda PT */ negate(merge(rseMatched(streams, 'Legenda PT confirmada', 'Legenda PT forcada'), negate(subtitleTrack(streams, '!lang'), subtitleTrack(streams, 'lang'))), merge(regexMatched(streams, 'PT Legenda declarada'), negate(merge(regexMatched(streams, 'PT Audio declarado'), regexMatched(streams, 'TRASH contexto audio')), regexMatched(merge(negate(regexMatched(streams, 'TRASH contexto legenda'), language(streams, 'Portuguese', 'Portuguese (Brazil)')), regexMatched(streams, 'PT Marcador sem trilha')), 'TRASH contexto legenda'))))",
+    "score": 0,
+    "enabled": true
+  },
+  {
+    "expression": "/* Indicio PT sem trilha */ negate(merge(rseMatched(streams, 'Audio PT verificado na faixa', 'Audio PT confirmado pela fonte', 'Possivel audio PT', 'Legenda PT confirmada', 'Legenda PT forcada', 'Possivel legenda PT'), regexMatched(merge(merge(audioTrack(streams, 'lang=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|pt|pt-BR|pt-PT|por'), audioTrack(streams, '!lang', 'title=Portuguese|Portuguese (Brazil)|Portuguese (Portugal)|Brazilian Portuguese|European Portuguese|Português|Português (Brasil)|Português (Portugal)|Português Brasileiro|pt|pt-BR|pt-PT|por')), negate(audioTrack(streams, '!lang'), audioTrack(streams, 'lang')), merge(indexer(addon(streams, 'Curupira'), 'Curupira (audio PT declarado)', 'Curupira (audio declarado)'), indexer(addon(streams, 'CapybaraBR'), 'CapybaraBR (audio PT declarado)', 'CapybaraBR (audio declarado)'))), 'PT Audio declarado'), regexMatched(negate(subtitleTrack(streams, '!lang'), subtitleTrack(streams, 'lang')), 'PT Legenda declarada')), merge(merge(negate(regexMatched(streams, 'TRASH contexto legenda'), language(streams, 'Portuguese', 'Portuguese (Brazil)')), regexMatched(streams, 'PT Marcador sem trilha')), regexMatched(streams, 'Dublagem sem idioma explicito', 'TRASH plataforma GLBO')))",
+    "score": 0,
+    "enabled": true
+  }
+]

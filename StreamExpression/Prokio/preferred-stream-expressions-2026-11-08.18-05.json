@@ -1,0 +1,66 @@
+[
+  {
+    "expression": "/* Audio PT verificado na faixa - em cache */ cached(rseMatched(streams, 'Audio PT verificado na faixa'))",
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio PT verificado na faixa - sem cache confirmado */ rseMatched(streams, 'Audio PT verificado na faixa')",
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio PT confirmado pela fonte - em cache */ cached(rseMatched(streams, 'Audio PT confirmado pela fonte'))",
+    "enabled": true
+  },
+  {
+    "expression": "/* Audio PT confirmado pela fonte - sem cache confirmado */ rseMatched(streams, 'Audio PT confirmado pela fonte')",
+    "enabled": true
+  },
+  {
+    "expression": "/* Possivel audio PT - em cache */ cached(rseMatched(streams, 'Possivel audio PT'))",
+    "enabled": true
+  },
+  {
+    "expression": "/* Possivel audio PT - sem cache confirmado */ rseMatched(streams, 'Possivel audio PT')",
+    "enabled": true
+  },
+  {
+    "expression": "/* Legenda PT confirmada - em cache */ cached(rseMatched(streams, 'Legenda PT confirmada'))",
+    "enabled": true
+  },
+  {
+    "expression": "/* Legenda PT confirmada - sem cache confirmado */ rseMatched(streams, 'Legenda PT confirmada')",
+    "enabled": true
+  },
+  {
+    "expression": "/* Legenda PT forcada - em cache */ cached(rseMatched(streams, 'Legenda PT forcada'))",
+    "enabled": true
+  },
+  {
+    "expression": "/* Legenda PT forcada - sem cache confirmado */ rseMatched(streams, 'Legenda PT forcada')",
+    "enabled": true
+  },
+  {
+    "expression": "/* Possivel legenda PT - em cache */ cached(rseMatched(streams, 'Possivel legenda PT'))",
+    "enabled": true
+  },
+  {
+    "expression": "/* Possivel legenda PT - sem cache confirmado */ rseMatched(streams, 'Possivel legenda PT')",
+    "enabled": true
+  },
+  {
+    "expression": "/* Indicio PT sem trilha - em cache */ cached(rseMatched(streams, 'Indicio PT sem trilha'))",
+    "enabled": true
+  },
+  {
+    "expression": "/* Indicio PT sem trilha - sem cache confirmado */ rseMatched(streams, 'Indicio PT sem trilha')",
+    "enabled": true
+  },
+  {
+    "expression": "/* Outras opcoes por qualidade - em cache */ cached(streams)",
+    "enabled": true
+  },
+  {
+    "expression": "/* Outras opcoes por qualidade - sem cache confirmado */ streams",
+    "enabled": true
+  }
+]
