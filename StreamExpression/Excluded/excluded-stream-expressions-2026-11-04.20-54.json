@@ -8,7 +8,7 @@
     "enabled": true
   },
   {
-    "expression": "keyword(streams, 'filename', 'cam', 'hdcam', 'telesync', 'camrip', 'vf1', 'vf2', 'truefrench', 'vff', 'vfi', 'vfq', 'kpfr', 'sample')",
+    "expression": "keyword(streams, 'filename', 'cam', 'legendado', 'hdcam', 'telesync', 'camrip', 'vf1', 'vf2', 'truefrench', 'vff', 'vfi', 'vfq', 'kpfr', 'sample')",
     "enabled": true
   }
 ]
