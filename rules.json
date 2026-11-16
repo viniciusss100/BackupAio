@@ -1,0 +1,724 @@
+{
+  "schema_version": 2,
+  "streamnzb_profile": 2,
+  "scoring": {
+    "movie": {
+      "size_target_gb": 20,
+      "size_weight": 500
+    },
+    "series": {
+      "size_target_gb": 6,
+      "size_weight": 150
+    }
+  },
+  "rules": [
+    {
+      "owner": "device:samsung-qn90a",
+      "rule": {
+        "action": "reject",
+        "name": "DV without HDR fallback",
+        "when": "dolbyVision and not hdrFallback"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "action": "reject",
+        "name": "Reject SAO II from SAO Season 1",
+        "when": "isAnime\nand kind == \"anime_show\"\nand title == \"Sword Art Online\"\nand season == 1\nand releaseName matches \"(?i)^Sword[. _-]+Art[. _-]+Online[. _-]+II(?:[. _\\[-]|$)\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "action": "reject",
+        "name": "Reject SAO from SAO II",
+        "when": "isAnime\nand kind == \"anime_show\"\nand title == \"Sword Art Online II\"\nand season == 1\nand releaseName matches \"(?i)^Sword[. _-]+Art[. _-]+Online(?:[. _\\[-]|$)\"\nand not releaseName matches \"(?i)^Sword[. _-]+Art[. _-]+Online[. _\\[-]+(?:II|Alicization|Progressive)\\b\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "action": "reject",
+        "name": "Reject 3D",
+        "when": "threeD"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "action": "reject",
+        "name": "Known unavailable",
+        "when": "avail.status == \"unavailable\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Dublado PT (Audio PT Declarado ou Indicado)",
+        "points": 300000,
+        "when": "matched(\"PT Audio Indicado\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Legendado PT (Legenda PT Declarada ou Indicada)",
+        "points": 150000,
+        "when": "matched(\"PT Legenda Indicada\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Exclusao Nao Dublado / Sem Dublagem",
+        "points": -300000,
+        "when": "matched(\"Exclusao Nao Dublado\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Alive on our backbone (Cache equivalente)",
+        "points": 25000,
+        "when": "avail.onMyBackbone"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Recently confirmed",
+        "points": 10000,
+        "when": "avail.checkedDaysAgo >= 0 and avail.checkedDaysAgo < 30"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base UHD Remux",
+        "points": 92000,
+        "when": "resolution == \"2160p\" and \"remux\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base UHD BluRay encode",
+        "points": 80000,
+        "when": "resolution == \"2160p\" and \"bluray\" in traits and not (\"remux\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base UHD WEB-DL",
+        "points": 78000,
+        "when": "resolution == \"2160p\" and \"webdl\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base FHD Remux",
+        "points": 80000,
+        "when": "resolution == \"1080p\" and \"remux\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base UHD WEBRip",
+        "points": 76500,
+        "when": "resolution == \"2160p\" and \"webrip\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V70 UHD fonte nao classificada",
+        "points": 73000,
+        "when": "resolution == \"2160p\" and not (\"remux\" in traits or \"bluray\" in traits or \"webdl\" in traits or \"webrip\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base QHD BluRay",
+        "points": 71000,
+        "when": "resolution == \"1440p\" and (\"bluray\" in traits or \"remux\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base QHD WEB-DL",
+        "points": 68000,
+        "when": "resolution == \"1440p\" and \"webdl\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base QHD WEBRip",
+        "points": 66000,
+        "when": "resolution == \"1440p\" and \"webrip\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V70 FHD BluRay encode",
+        "points": 66000,
+        "when": "resolution == \"1080p\" and \"bluray\" in traits and not (\"remux\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V65 FHD WEB-DL",
+        "points": 65000,
+        "when": "resolution == \"1080p\" and \"webdl\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V60 QHD fonte nao classificada",
+        "points": 63000,
+        "when": "resolution == \"1440p\" and not (\"remux\" in traits or \"bluray\" in traits or \"webdl\" in traits or \"webrip\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V60 FHD WEBRip",
+        "points": 63000,
+        "when": "resolution == \"1080p\" and \"webrip\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V50 FHD fonte nao classificada",
+        "points": 52000,
+        "when": "resolution == \"1080p\" and not (\"remux\" in traits or \"bluray\" in traits or \"webdl\" in traits or \"webrip\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V50 HD BluRay ou Remux",
+        "points": 50000,
+        "when": "resolution == \"720p\" and (\"bluray\" in traits or \"remux\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V45 HD WEB-DL",
+        "points": 46000,
+        "when": "resolution == \"720p\" and \"webdl\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V40 HD WEBRip",
+        "points": 44000,
+        "when": "resolution == \"720p\" and \"webrip\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V30 HD fonte nao classificada",
+        "points": 33000,
+        "when": "resolution == \"720p\" and not (\"remux\" in traits or \"bluray\" in traits or \"webdl\" in traits or \"webrip\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base SD 576p",
+        "points": 25000,
+        "when": "resolution == \"576p\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base SD 480p",
+        "points": 21000,
+        "when": "resolution == \"480p\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V20 Fonte SD identificada",
+        "points": 20000,
+        "when": "resolution == \"\" and (\"dvdrip\" in traits or \"hdtv\" in traits or \"hdrip\" in traits or \"bluray\" in traits or \"webdl\" in traits or \"webrip\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base baixa resolucao 360p",
+        "points": 13000,
+        "when": "resolution == \"360p\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "V10 Fonte desconhecida",
+        "points": 10000,
+        "when": "resolution == \"\" and not (\"dvdrip\" in traits or \"hdtv\" in traits or \"hdrip\" in traits or \"bluray\" in traits or \"webdl\" in traits or \"webrip\" in traits)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Base baixa resolucao 240p 144p",
+        "points": 8000,
+        "when": "resolution == \"240p\" or resolution == \"144p\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Dolby Vision com HDR base sinalizado",
+        "points": 6500,
+        "when": "dolbyVision and (any(hdr, # == \"HDR10+\" or # == \"HDR10\" or # == \"HDR\" or # == \"HLG\") or hdrFallback)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Dolby Vision sem HDR base sinalizado",
+        "points": 6000,
+        "when": "dolbyVision and not (any(hdr, # == \"HDR10+\" or # == \"HDR10\" or # == \"HDR\" or # == \"HLG\") or hdrFallback)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Imagem HDR10+ sinalizada",
+        "points": 4000,
+        "when": "not dolbyVision and any(hdr, # == \"HDR10+\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Imagem HDR10 sinalizada",
+        "points": 3000,
+        "when": "not dolbyVision and not any(hdr, # == \"HDR10+\") and any(hdr, # == \"HDR10\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Imagem HLG ou HDR generico",
+        "points": 1600,
+        "when": "not dolbyVision and not any(hdr, # == \"HDR10+\" or # == \"HDR10\") and any(hdr, # == \"HDR\" or # == \"HLG\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Upscale de video declarado",
+        "points": -35000,
+        "when": "matched(\"Upscale Declarado\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Audio lossless anunciado no arquivo",
+        "points": 800,
+        "when": "\"truehd\" in traits or \"dts_lossless\" in traits or \"dts_x\" in traits or releaseName matches \"(?i)\\\\b(?:FLAC|L?PCM)\\\\b\""
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Audio com perdas multicanal anunciado",
+        "points": 400,
+        "when": "not (\"truehd\" in traits or \"dts_lossless\" in traits or \"dts_x\" in traits or releaseName matches \"(?i)\\\\b(?:FLAC|L?PCM)\\\\b\") and (\"dolby_digital_plus\" in traits or \"dts_es\" in traits or \"dts_lossy\" in traits or releaseName matches \"(?i)\\\\bDTS-HD\\\\b\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Audio com perdas anunciado",
+        "points": 200,
+        "when": "not (\"truehd\" in traits or \"dts_lossless\" in traits or \"dts_x\" in traits or \"dolby_digital_plus\" in traits or \"dts_es\" in traits or \"dts_lossy\" in traits or releaseName matches \"(?i)\\\\b(?:FLAC|L?PCM|DTS-HD)\\\\b\") and (\"aac\" in traits or \"dolby_digital\" in traits or releaseName matches \"(?i)\\\\bOPUS\\\\b\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Audio Atmos - desempate",
+        "points": 150,
+        "when": "\"atmos\" in traits and not matched(\"Atmos Exclude Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Micro-encode com alerta",
+        "points": -12000,
+        "when": "matched(\"TRASH micro-encodes com alerta\")"
+      }
+    },
+    {
+      "owner": "presentation",
+      "rule": {
+        "name": "Bad Dual (Neutro para Dublado PT)",
+        "points": 0,
+        "when": "matched(\"TRASH Bad Dual\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Hardcoded subs",
+        "points": -3000,
+        "when": "hardcoded"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Converted penalty",
+        "points": -1000,
+        "when": "\"converted\" in traits"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "IMAX",
+        "points": 700,
+        "when": "releaseName matches \"(?i)\\\\bIMAX\\\\b\"",
+        "scope": "movie"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Open matte",
+        "points": 25,
+        "when": "releaseName matches \"(?i)\\\\bOpen[. _-]?Matte\\\\b\"",
+        "scope": "movie"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movie Edition Preference",
+        "points": 25,
+        "when": "edition == \"Directors Cut\" or edition == \"Extended Edition\"",
+        "scope": "movie"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "SeaDex Best exato - somente anime",
+        "points": 300,
+        "when": "isAnime and seadex.best"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies Remux T1",
+        "points": 500,
+        "scope": "movie",
+        "when": "\"remux\" in traits\nand matched(\"Movies Remux T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies Remux T2",
+        "points": 300,
+        "scope": "movie",
+        "when": "\"remux\" in traits\nand matched(\"Movies Remux T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies Remux T3",
+        "points": 100,
+        "scope": "movie",
+        "when": "\"remux\" in traits\nand matched(\"Movies Remux T3 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies WEB T1",
+        "points": 500,
+        "scope": "movie",
+        "when": "\"webdl\" in traits\nand matched(\"Movies WEB T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies WEB T2",
+        "points": 300,
+        "scope": "movie",
+        "when": "\"webdl\" in traits\nand matched(\"Movies WEB T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies WEB T3",
+        "points": 100,
+        "scope": "movie",
+        "when": "\"webdl\" in traits\nand matched(\"Movies WEB T3 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies UHD BluRay T1",
+        "points": 500,
+        "scope": "movie",
+        "when": "resolution == \"2160p\"\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Movies UHD BluRay T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies UHD BluRay T2",
+        "points": 300,
+        "scope": "movie",
+        "when": "resolution == \"2160p\"\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Movies UHD BluRay T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies UHD BluRay T3",
+        "points": 100,
+        "scope": "movie",
+        "when": "resolution == \"2160p\"\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Movies UHD BluRay T3 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies HD BluRay T1",
+        "points": 500,
+        "scope": "movie",
+        "when": "(resolution == \"1080p\" or resolution == \"720p\")\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Movies HD BluRay T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies HD BluRay T2",
+        "points": 300,
+        "scope": "movie",
+        "when": "(resolution == \"1080p\" or resolution == \"720p\")\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Movies HD BluRay T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Movies HD BluRay T3",
+        "points": 100,
+        "scope": "movie",
+        "when": "(resolution == \"1080p\" or resolution == \"720p\")\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Movies HD BluRay T3 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Shows Remux T1",
+        "points": 500,
+        "scope": "series",
+        "when": "\"remux\" in traits\nand matched(\"Shows Remux T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Shows Remux T2",
+        "points": 300,
+        "scope": "series",
+        "when": "\"remux\" in traits\nand matched(\"Shows Remux T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Shows WEB T1",
+        "points": 500,
+        "scope": "series",
+        "when": "\"webdl\" in traits\nand matched(\"Shows WEB T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Shows WEB T2",
+        "points": 300,
+        "scope": "series",
+        "when": "\"webdl\" in traits\nand matched(\"Shows WEB T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Shows WEB T3",
+        "points": 100,
+        "scope": "series",
+        "when": "\"webdl\" in traits\nand matched(\"Shows WEB T3 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Shows BluRay T1",
+        "points": 500,
+        "scope": "series",
+        "when": "(resolution == \"1080p\" or resolution == \"720p\")\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Shows BluRay T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Shows BluRay T2",
+        "points": 300,
+        "scope": "series",
+        "when": "(resolution == \"1080p\" or resolution == \"720p\")\nand \"bluray\" in traits\nand not (\"remux\" in traits)\nand matched(\"Shows BluRay T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Anime Shows WEB T1",
+        "points": 500,
+        "scope": "anime_show",
+        "when": "\"webdl\" in traits\nand matched(\"Anime Shows WEB T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Anime Shows WEB T2",
+        "points": 400,
+        "scope": "anime_show",
+        "when": "\"webdl\" in traits\nand matched(\"Anime Shows WEB T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Anime Shows WEB T3",
+        "points": 300,
+        "scope": "anime_show",
+        "when": "\"webdl\" in traits\nand matched(\"Anime Shows WEB T3 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Anime Shows BluRay T1",
+        "points": 560,
+        "scope": "anime_show",
+        "when": "(\"bluray\" in traits or \"remux\" in traits)\nand matched(\"Anime Shows BluRay T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Anime Shows BluRay T2",
+        "points": 480,
+        "scope": "anime_show",
+        "when": "(\"bluray\" in traits or \"remux\" in traits)\nand matched(\"Anime Shows BluRay T2 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Anime Movies WEB T1",
+        "points": 500,
+        "scope": "anime_movie",
+        "when": "\"webdl\" in traits\nand matched(\"Anime Movies WEB T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Anime Movies BluRay T1",
+        "points": 560,
+        "scope": "anime_movie",
+        "when": "(\"bluray\" in traits or \"remux\" in traits)\nand matched(\"Anime Movies BluRay T1 Groups\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Generated Dynamic HDR Penalty",
+        "points": -10000,
+        "scope": "movie",
+        "when": "matched(\"Movies Generated Dynamic HDR Groups\")\nand (dolbyVision or any(hdr, # == \"HDR10+\"))"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Repack/Proper Preference",
+        "points": -15,
+        "when": "(proper or repack) and not (releaseName matches \"(?i)(?:^|[. _\\\\[\\\\]-])REPACK[. _-]?(?:2|3)(?:$|[. _\\\\[\\\\]-])\")"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "name": "Complete Season Pack Preference",
+        "when": "(kind == \"series\" or kind == \"anime_show\") and seasonPack and complete",
+        "points": 10
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "action": "limit",
+        "count": 3,
+        "group_by": "resolution + \" \" + quality",
+        "name": "Best 3 per R/Q",
+        "when": "not library\nand not ((kind == \"series\" or kind == \"anime_show\") and seasonPack)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "action": "limit",
+        "count": 1,
+        "group_by": "resolution + \" \" + quality",
+        "name": "Best 1 Library per R/Q",
+        "when": "library\nand not ((kind == \"series\" or kind == \"anime_show\") and seasonPack)"
+      }
+    },
+    {
+      "owner": "core",
+      "rule": {
+        "action": "limit",
+        "count": 1,
+        "group_by": "resolution + \" \" + quality",
+        "name": "Best 1 Season Pack per R/Q",
+        "when": "(kind == \"series\" or kind == \"anime_show\") and seasonPack"
+      }
+    }
+  ]
+}
