@@ -1,0 +1,14 @@
+[
+  {
+    "expression": "language(streams, 'Portuguese', 'Portuguese (Brazil)')",
+    "enabled": false
+  },
+  {
+    "expression": "type(streams, 'usenet')",
+    "enabled": false
+  },
+  {
+    "expression": "merge(service(cached(streams), 'torbox'), addon(streams, 'Newznab'))",
+    "enabled": true
+  }
+]
