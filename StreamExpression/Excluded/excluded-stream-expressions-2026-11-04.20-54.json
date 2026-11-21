@@ -1,9 +1,5 @@
 [
   {
-    "expression": "negate(   addon(service(uncached(streams), 'torbox'), 'Newznab'),   service(uncached(streams), 'torbox') )",
-    "enabled": true
-  },
-  {
     "expression": "quality(streams, 'CAM', 'CAMRip', 'TC', 'HDTC')",
     "enabled": true
   },
